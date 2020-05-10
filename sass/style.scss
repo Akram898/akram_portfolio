@@ -1,0 +1,787 @@
+@import "config";
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+//font-family: 'Libre Franklin', sans-serif;
+$primary-color: #1a57a7;
+$secondary-color: #333333;
+$bootstrap-color: #007bff;
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Libre Franklin", sans-serif;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  color: #505962;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*---------- Navigation---------------*/
+
+/*
+nav {
+  .navbar-default {
+    background: none;
+  }
+  ul {
+    li {
+      margin-left: 10px;
+    }
+    a {
+      text-transform: uppercase;
+    }
+  }
+}
+*/
+
+//-----------Start NavBar-------------------------------------
+#logo-img {
+  max-width: 150px;
+}
+.navbar {
+  transition: all 0.4s;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  li {
+    margin-right: 0;
+    padding-left: 1rem;
+  }
+}
+
+.nav-link {
+  color: #fff;
+  letter-spacing: 2px;
+}
+.navbar-nav .nav-link.active {
+  color: $primary-color;
+  font-weight: bold;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: $primary-color;
+  transition: ease-in-out 0.4s;
+  text-decoration: none;
+}
+
+/* Change navbar styling on scroll */
+
+//-----------End NavBar-------------------------------------
+
+//-----------Banner-------------------------------------
+
+.text-primary {
+  color: $primary-color;
+}
+.img-contain {
+  background: url(../img/code.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+.img-mobile {
+  margin-top: 40%;
+  margin-bottom: 60%;
+  animation: yourAnimation 2.5s forwards 0s ease;
+}
+@keyframes yourAnimation {
+  0% {
+    transform: rotate(0) translateY(-40%);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0) translateY(0);
+    opacity: 01;
+  }
+}
+.site-content {
+  background: rgba(13, 14, 15, 0.9);
+  margin: 0;
+
+  .site-title {
+    animation: yourAnimation 1s forwards 0s ease;
+    font-size: 64px;
+    padding: 20px;
+
+    line-height: 40px;
+    color: #fff;
+    margin-top: 20%;
+    margin-bottom: 4%;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    text-shadow: 0.1rem 0.1rem 0.7rem black;
+  }
+
+  .site-desc {
+    animation: yourAnimation 2s forwards 0s ease;
+    color: #fff;
+    font-size: 33px;
+
+    letter-spacing: 5;
+    text-shadow: 0.1rem 0.1rem 0.7rem black;
+    text-align: center;
+
+    margin-bottom: 8%;
+  }
+
+  .btn {
+    margin-left: 15px;
+    padding: 0.57rem 1.2rem;
+    animation: yourAnimation 2s forwards 0s ease;
+  }
+
+  .btn-cv {
+    background-color: $primary-color;
+  }
+
+  .social-icons {
+    text-align: center;
+    margin: 5% 0;
+    a {
+      padding-left: 24px;
+      i {
+        font-size: 55px;
+      }
+      .youtube-icon {
+        color: rgba(240, 25, 10, 0.548);
+      }
+      .github-icon {
+        color: rgba(194, 184, 184, 0.548);
+      }
+      .blog-icon {
+        color: rgba(41, 94, 238, 0.548);
+      }
+    }
+  }
+}
+
+//===============End Banner-----------------------------
+
+// ----------------------Start Portfolio Page-----------------------------
+
+// ----------------------Start Portfolio Page-----------------------------
+#portfolio {
+  background-image: linear-gradient(
+    rgba(244, 249, 252, 0.877),
+    hsl(0, 18%, 86%)
+  );
+  padding: 0 4% 8% 4%;
+
+  h1 {
+    animation: yourAnimation 1s forwards 0s ease;
+    font-size: 55px;
+    padding: 20px;
+
+    line-height: 40px;
+    color: $secondary-color;
+    padding-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+
+    letter-spacing: 0.3rem;
+    text-shadow: 0.1rem 0.1rem 0.4rem black;
+  }
+}
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  // new chrome extension
+
+  img {
+    animation: yourAnimation 2s forwards 0s ease;
+    width: 100%;
+    border-top: 3px $secondary-color solid;
+    border-right: 3px $secondary-color solid;
+    border-left: 3px $secondary-color solid;
+    border-bottom: 3px #fff solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $primary-color;
+      @include easeOut;
+    }
+  }
+
+  @keyframes yourAnimation {
+    0% {
+      transform: rotate(0) translateY(-40%);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0) translateY(0);
+      opacity: 01;
+    }
+  }
+
+  i {
+    padding: 8px;
+  }
+}
+
+//Button Styles----
+.btn {
+  display: block;
+  padding: 2px;
+  margin-bottom: 0.4rem;
+  text-align: center;
+  border-radius: 9px;
+
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+
+// -----------------------End Portfolio Page----------------------------
+
+// -----------------------Start Services Section----------------------------
+
+// #card-section {
+//   //.heading-1 {
+//   // margin-top: 10%;
+//   // }
+//   background-color: #f5f5f5;
+//   .heading-2 {
+//     margin-top: 10px;
+//     margin-bottom: 2%;
+//     font-weight: 25px;
+//     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+//       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+//   }
+
+//   p {
+//     font-weight: 70px;
+//     margin-bottom: 4%;
+//     margin-top: 3%;
+//   }
+// }
+// .card {
+//   padding: 0 0 30px 0;
+//   &:hover {
+//     background-color: $primary-color;
+//     color: #fff;
+//     transition: ease-out 0.4s;
+//   }
+//   .card-header {
+//     background-color: $primary-color;
+//     color: #fff;
+//   }
+//   .img-services {
+//     max-width: 40%;
+//     margin: 20% 0 4% 0;
+//     padding: 2%;
+//     display: block;
+
+//     background-color: $primary-color;
+//     margin: 15% 0 7% 37%;
+//   }
+//   .btn {
+//     background-color: #76db6e;
+//     color: #fff;
+//     margin-bottom: 10%;
+//   }
+// }
+
+// .card-deck {
+//   display: flex;
+//   justify-content: flex-start;
+//   flex-flow: row wrap;
+//   align-items: stretch;
+// }
+// .card-deck .card {
+//   display: block;
+//   flex-basis: 80.3%; /* change this value for each breakpoint*/
+// }
+
+// -----------------------End Services Section----------------------------
+
+/* 
+#Portfolio {
+  background-image: linear-gradient(
+    rgba(244, 249, 252, 0.877),
+    hsl(0, 18%, 86%)
+  );
+  padding: 0 4% 8% 4%;
+
+  h1 {
+    animation: yourAnimation 1s forwards 0s ease;
+    font-size: 55px;
+    padding: 20px;
+
+    line-height: 40px;
+    color: $secondary-color;
+    padding-top: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+
+    letter-spacing: 0.3rem;
+    text-shadow: 0.1rem 0.1rem 0.4rem black;
+  }
+
+  .btn-github {
+    padding: 5px 30%;
+  }
+
+  //******Hover effect*************
+
+  .hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+  }
+
+  .hovereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+  }
+
+  .hovereffect h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-transform: translatey(-100px);
+    -ms-transform: translatey(-100px);
+    transform: translatey(-100px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    padding: 10px;
+  }
+
+  .hovereffect a.info {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin: 50px 0 0;
+    padding: 7px 14px;
+  }
+
+  .hovereffect a.info:hover {
+    box-shadow: 0 0 5px #fff;
+  }
+
+  .hovereffect:hover img {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  .hovereffect:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+  .hovereffect:hover h2,
+  .hovereffect:hover a.info {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-transform: translatey(0);
+    -webkit-transform: translatey(0);
+    transform: translatey(0);
+  }
+
+  .hovereffect:hover a.info {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+}
+//End Portfolio****************************
+//$bootstrap-color: 007BFF;
+
+#contact-loc {
+  i {
+    margin: 14% 0 5% 0;
+  }
+  p {
+    padding: 25px 0 5% 0;
+  }
+}
+*/
+//------------Connect-----------
+/*.connect {
+  background-image: url(../img/fantasy.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  margin-top: 7%;
+}*/
+
+#services-section {
+  margin: 5% 0;
+  h1 {
+    animation: yourAnimation 1s forwards 0s ease;
+    font-size: 55px;
+    padding-bottom: 3%;
+    line-height: 40px;
+    color: $secondary-color;
+
+    margin-bottom: 3%;
+    text-align: center;
+
+    letter-spacing: 0.3rem;
+    text-shadow: 0.1rem 0.1rem 0.4rem black;
+  }
+
+  h4 {
+    padding: 8% 0 4% 0;
+    font-size: 35px;
+    line-height: 40px;
+    color: $secondary-color;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    text-shadow: 0.08rem 0.02rem black;
+  }
+}
+
+//**************End Services****************************
+
+//**************Start About*********************************
+#about {
+  background-image: url(../img/computer-services.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  .shade {
+    background-color: rgba(36, 33, 33, 0.8);
+    color: seashell;
+  }
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0px;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: -1;
+  //   background: rgba(($primary-color), $background-opacity);
+  // }
+
+  img {
+    width: 80%;
+    padding: 10%;
+    margin-left: 20%;
+    margin-top: 15%;
+  }
+
+  h1 {
+    padding: 14% 0 3% 0;
+    color: #fff;
+    animation: yourAnimation 1s forwards 0s ease;
+    font-size: 45px;
+
+    line-height: 40px;
+
+    margin-bottom: 3%;
+    text-align: center;
+
+    letter-spacing: 0.3rem;
+    text-shadow: 0.1rem 0.1rem 0.4rem black;
+  }
+  p {
+    color: wheat;
+    font-size: 18px;
+    font-weight: 5px;
+    text-shadow: 0.1rem 0.1rem 0.4rem black;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+  }
+  .btn-connect {
+    background-color: $primary-color;
+    margin: 3% 0 3% 0;
+    padding: 0.8rem 1.8rem;
+    font-size: 24px;
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  #my-img {
+    position: relative;
+    right: 200px;
+    bottom: 50px;
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  .social-icons {
+    position: relative;
+    bottom: 190px;
+    text-align: center;
+    margin: 0 0 8% 0;
+    a {
+      padding-left: 24px;
+      i {
+        font-size: 55px;
+      }
+      .youtube-icon {
+        color: rgba(240, 25, 10, 0.548);
+      }
+      .github-icon {
+        color: wheat;
+      }
+      .blog-icon {
+        color: rgba(41, 94, 238, 0.548);
+      }
+    }
+  }
+}
+//**************End About*********************************
+
+//*****************End curosel****************************
+//-----------Clients Icons-------------
+#skills {
+  background: #1b1b1b;
+  padding-bottom: 5%;
+
+  h1 {
+    padding: 4% 0 1% 0;
+    color: #fff;
+    animation: yourAnimation 1s forwards 0s ease;
+    font-size: 45px;
+    text-transform: uppercase;
+
+    line-height: 40px;
+
+    text-align: center;
+
+    letter-spacing: 0.3rem;
+    text-shadow: 0.1rem 0.1rem 0.4rem black;
+  }
+  hr {
+    border-top: 3px solid wheat;
+    width: 20%;
+    text-align: center;
+    margin-left: 40%;
+    padding-bottom: 2%;
+  }
+
+  p {
+    color: wheat;
+    font-size: 17px;
+    font-weight: 5px;
+    text-shadow: 0.1rem 0.1rem 0.4rem black;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+  }
+  .para {
+    margin-bottom: 2%;
+    font-weight: bold;
+    span {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  img {
+    position: relative;
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+  }
+}
+//----------------End curosel*************************
+
+//----------------Start Contact*************************
+#contact {
+  background-image: linear-gradient(#333, rgb(43, 31, 20));
+  padding-top: 5%;
+  height: 100%;
+  h1 {
+    animation: yourAnimation 1s forwards 0s ease;
+    font-size: 55px;
+    padding: 5%;
+
+    line-height: 40px;
+    color: #fff;
+
+    margin-bottom: 3%;
+    text-align: center;
+
+    letter-spacing: 0.3rem;
+    text-shadow: 0.1rem 0.1rem 0.4rem black;
+  }
+  .info {
+    font-size: 35px;
+    text-shadow: 0.1rem 0.1rem 0.1rem 0.4rem black;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    width: 100%;
+    padding: 4%;
+    border: 3px solid wheat;
+    display: block;
+    margin-bottom: 4%;
+    background-color: $secondary-color;
+
+    span {
+      font-size: 35px;
+      text-shadow: 0.1rem 0.1rem 0.1rem 0.4rem black;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+    }
+
+    &:hover {
+      background-color: white;
+      color: $secondary-color;
+      padding: 1.5%;
+      @include easeOut;
+    }
+  }
+  img {
+    width: 50%;
+    padding: 5% 0;
+  }
+
+  i {
+    font-size: 20px;
+  }
+
+  // .boxes {
+  //   display: flex;
+
+  //   justify-content: space-evenly;
+  //   align-items: center;
+  //   margin-top: 1rem;
+  //   color: #fff;
+
+  //   div {
+  //     font-size: 2rem;
+  //     border: 3px wheat solid;
+  //     padding: 1.5rem 2.5rem;
+  //     margin-bottom: 3rem;
+  //     @include easeOut;
+  //     &:hover {
+  //       padding: 0.5rem 1.5rem;
+  //       background-color: $primary-color;
+  //       color: set-text-color($secondary-color);
+  //       span {
+  //         color: #fff;
+  //       }
+  //     }
+  //   }
+  // }
+}
+//----------------End Contact*************************
+
+/*----------Start Footer Section------------------*/
+
+footer {
+  background-color: #40474e;
+
+  color: seashell;
+  text-align: center;
+  padding-bottom: 10px;
+  a {
+    color: white;
+
+    &:hover {
+      color: $primary-color;
+      transition: ease-in-out 0.4s;
+    }
+  }
+}
+
+hr.socket {
+  width: 100%;
+  border-top: 0.2rem solid $primary-color;
+}
+hr.socket h5 {
+  text-align: center;
+}
+
+/*----------End Footer Section------------------*/
+// #atat {
+//   padding-top: 6% !important;
+//   padding-bottom: 14px;
+// }
+// #btttttt {
+//   background-color: $primary-color;
+// }
+
+//--------------Media queries------------------
+@media (max-width: 807px) {
+  .site-content {
+    background: rgba(13, 14, 15, 0.8);
+
+    .site-title {
+      font-size: 35px;
+      padding-bottom: 35px;
+      padding-top: 50px;
+    }
+    .site-desc {
+      font-size: 25px;
+      padding-bottom: 25px;
+    }
+
+    .site-btn1 {
+      position: absolute;
+      top: 80%;
+      right: 35%;
+    }
+    .app-buttons {
+      display: grid;
+      grid-gap: 0.8rem;
+      grid-template-columns: 1fr;
+      padding: 0 5%;
+    }
+    .social-icons {
+      padding-right: 30px;
+      i {
+        padding-top: 20px;
+        font-size: 40px;
+        text-align: center;
+      }
+    }
+    .img-mobile {
+      margin-left: 14%;
+    }
+  }
+
+  .social-icons {
+    top: -1px;
+  }
+}
+
+@import "mobile";
