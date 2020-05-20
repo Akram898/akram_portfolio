@@ -10,11 +10,20 @@ $bootstrap-color: #007bff;
 html {
   scroll-behavior: smooth;
   font-family: "Libre Franklin", sans-serif;
+  width: 100%;
+
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 body {
-  overflow-x: hidden;
   font-family: "Lato", sans-serif;
   color: #505962;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 * {
   margin: 0;
@@ -22,22 +31,6 @@ body {
 }
 
 /*---------- Navigation---------------*/
-
-/*
-nav {
-  .navbar-default {
-    background: none;
-  }
-  ul {
-    li {
-      margin-left: 10px;
-    }
-    a {
-      text-transform: uppercase;
-    }
-  }
-}
-*/
 
 //-----------Start NavBar-------------------------------------
 #logo-img {
@@ -128,7 +121,9 @@ nav {
 
     margin-bottom: 8%;
   }
-
+  .app-buttons {
+    margin-bottom: 15%;
+  }
   .btn {
     margin-left: 15px;
     padding: 0.57rem 1.2rem;
@@ -175,12 +170,10 @@ nav {
   h1 {
     animation: yourAnimation 1s forwards 0s ease;
     font-size: 55px;
-    padding: 20px;
-
     line-height: 40px;
     color: $secondary-color;
-    padding-top: 5%;
-    margin-bottom: 3%;
+    padding: 10% 0 2% 0;
+    margin-bottom: 5%;
     text-align: center;
 
     letter-spacing: 0.3rem;
@@ -203,7 +196,7 @@ nav {
     border-bottom: 3px #fff solid;
 
     &:hover {
-      opacity: 0.5;
+      opacity: 0.2;
       border-color: $primary-color;
       @include easeOut;
     }
@@ -251,219 +244,27 @@ nav {
 
 // -----------------------End Portfolio Page----------------------------
 
-// -----------------------Start Services Section----------------------------
-
-// #card-section {
-//   //.heading-1 {
-//   // margin-top: 10%;
-//   // }
-//   background-color: #f5f5f5;
-//   .heading-2 {
-//     margin-top: 10px;
-//     margin-bottom: 2%;
-//     font-weight: 25px;
-//     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-//       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-//   }
-
-//   p {
-//     font-weight: 70px;
-//     margin-bottom: 4%;
-//     margin-top: 3%;
-//   }
-// }
-// .card {
-//   padding: 0 0 30px 0;
-//   &:hover {
-//     background-color: $primary-color;
-//     color: #fff;
-//     transition: ease-out 0.4s;
-//   }
-//   .card-header {
-//     background-color: $primary-color;
-//     color: #fff;
-//   }
-//   .img-services {
-//     max-width: 40%;
-//     margin: 20% 0 4% 0;
-//     padding: 2%;
-//     display: block;
-
-//     background-color: $primary-color;
-//     margin: 15% 0 7% 37%;
-//   }
-//   .btn {
-//     background-color: #76db6e;
-//     color: #fff;
-//     margin-bottom: 10%;
-//   }
-// }
-
-// .card-deck {
-//   display: flex;
-//   justify-content: flex-start;
-//   flex-flow: row wrap;
-//   align-items: stretch;
-// }
-// .card-deck .card {
-//   display: block;
-//   flex-basis: 80.3%; /* change this value for each breakpoint*/
-// }
-
-// -----------------------End Services Section----------------------------
-
-/* 
-#Portfolio {
-  background-image: linear-gradient(
-    rgba(244, 249, 252, 0.877),
-    hsl(0, 18%, 86%)
-  );
-  padding: 0 4% 8% 4%;
-
-  h1 {
-    animation: yourAnimation 1s forwards 0s ease;
-    font-size: 55px;
-    padding: 20px;
-
-    line-height: 40px;
-    color: $secondary-color;
-    padding-top: 5%;
-    margin-bottom: 3%;
-    text-align: center;
-
-    letter-spacing: 0.3rem;
-    text-shadow: 0.1rem 0.1rem 0.4rem black;
-  }
-
-  .btn-github {
-    padding: 5px 30%;
-  }
-
-  //******Hover effect*************
-
-  .hovereffect {
-    width: 100%;
-    height: 100%;
-    float: left;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    cursor: default;
-  }
-
-  .hovereffect .overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-  }
-
-  .hovereffect img {
-    display: block;
-    position: relative;
-    -webkit-transition: all 0.4s linear;
-    transition: all 0.4s linear;
-  }
-
-  .hovereffect h2 {
-    text-transform: uppercase;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    font-size: 17px;
-    background: rgba(0, 0, 0, 0.6);
-    -webkit-transform: translatey(-100px);
-    -ms-transform: translatey(-100px);
-    transform: translatey(-100px);
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    padding: 10px;
-  }
-
-  .hovereffect a.info {
-    text-decoration: none;
-    display: inline-block;
-    text-transform: uppercase;
-    color: #fff;
-    border: 1px solid #fff;
-    background-color: transparent;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    margin: 50px 0 0;
-    padding: 7px 14px;
-  }
-
-  .hovereffect a.info:hover {
-    box-shadow: 0 0 5px #fff;
-  }
-
-  .hovereffect:hover img {
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-
-  .hovereffect:hover .overlay {
-    opacity: 1;
-    filter: alpha(opacity=100);
-  }
-
-  .hovereffect:hover h2,
-  .hovereffect:hover a.info {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    -ms-transform: translatey(0);
-    -webkit-transform: translatey(0);
-    transform: translatey(0);
-  }
-
-  .hovereffect:hover a.info {
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-  }
-}
-//End Portfolio****************************
-//$bootstrap-color: 007BFF;
-
-#contact-loc {
-  i {
-    margin: 14% 0 5% 0;
-  }
-  p {
-    padding: 25px 0 5% 0;
-  }
-}
-*/
-//------------Connect-----------
-/*.connect {
-  background-image: url(../img/fantasy.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  margin-top: 7%;
-}*/
-
 #services-section {
-  margin: 5% 0;
+  margin: 9% 0;
   h1 {
     animation: yourAnimation 1s forwards 0s ease;
     font-size: 55px;
-    padding-bottom: 3%;
+    padding-top: 2%;
+    padding-bottom: 10px;
     line-height: 40px;
     color: $secondary-color;
 
-    margin-bottom: 3%;
     text-align: center;
 
     letter-spacing: 0.3rem;
     text-shadow: 0.1rem 0.1rem 0.4rem black;
+  }
+  hr {
+    border-top: 3px solid $secondary-color;
+    width: 10%;
+    text-align: center;
+    margin-left: 45%;
+    padding-bottom: 8%;
   }
 
   h4 {
@@ -489,16 +290,6 @@ nav {
     background-color: rgba(36, 33, 33, 0.8);
     color: seashell;
   }
-  // &:after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0px;
-  //   width: 100%;
-  //   height: 100%;
-  //   z-index: -1;
-  //   background: rgba(($primary-color), $background-opacity);
-  // }
 
   img {
     width: 80%;
@@ -508,18 +299,24 @@ nav {
   }
 
   h1 {
-    padding: 14% 0 3% 0;
+    padding: 19% 0 9px 0;
     color: #fff;
     animation: yourAnimation 1s forwards 0s ease;
     font-size: 45px;
 
     line-height: 40px;
 
-    margin-bottom: 3%;
     text-align: center;
 
     letter-spacing: 0.3rem;
     text-shadow: 0.1rem 0.1rem 0.4rem black;
+  }
+  hr {
+    border-top: 3px solid wheat;
+    width: 40%;
+    text-align: center;
+    margin-left: 30%;
+    padding-bottom: 8%;
   }
   p {
     color: wheat;
@@ -528,16 +325,21 @@ nav {
     text-shadow: 0.1rem 0.1rem 0.4rem black;
     letter-spacing: 2px;
     font-family: sans-serif;
+    padding-bottom: 15px;
+  }
+  .btn {
+    margin: 3% 0 6% 0;
+    padding: 0.8rem 1.8rem;
+    font-size: 24px;
   }
   .btn-connect {
     background-color: $primary-color;
-    margin: 3% 0 3% 0;
-    padding: 0.8rem 1.8rem;
-    font-size: 24px;
+
     &:hover {
       background-color: #fff;
     }
   }
+
   #my-img {
     position: relative;
     right: 200px;
@@ -571,11 +373,12 @@ nav {
 }
 //**************End About*********************************
 
-//*****************End curosel****************************
-//-----------Clients Icons-------------
+//*****************Start carousel****************************
+//-----------Skills Icons-------------
 #skills {
   background: #1b1b1b;
   padding-bottom: 5%;
+  padding-top: 2%;
 
   h1 {
     padding: 4% 0 1% 0;
@@ -593,10 +396,10 @@ nav {
   }
   hr {
     border-top: 3px solid wheat;
-    width: 20%;
+    width: 8%;
     text-align: center;
-    margin-left: 40%;
-    padding-bottom: 2%;
+    margin-left: 46%;
+    padding-bottom: 4%;
   }
 
   p {
@@ -606,9 +409,10 @@ nav {
     text-shadow: 0.1rem 0.1rem 0.4rem black;
     letter-spacing: 2px;
     font-family: sans-serif;
+    padding-bottom: 2%;
   }
   .para {
-    margin-bottom: 2%;
+    margin-bottom: 5%;
     font-weight: bold;
     span {
       font-size: 20px;
@@ -627,7 +431,7 @@ nav {
 //----------------Start Contact*************************
 #contact {
   background-image: linear-gradient(#333, rgb(43, 31, 20));
-  padding-top: 5%;
+  padding: 7% 0 0 0;
   height: 100%;
   h1 {
     animation: yourAnimation 1s forwards 0s ease;
@@ -643,6 +447,7 @@ nav {
     letter-spacing: 0.3rem;
     text-shadow: 0.1rem 0.1rem 0.4rem black;
   }
+
   .info {
     font-size: 35px;
     text-shadow: 0.1rem 0.1rem 0.1rem 0.4rem black;
@@ -669,6 +474,35 @@ nav {
       @include easeOut;
     }
   }
+
+  #e-mail {
+    background-color: white;
+    color: $secondary-color;
+    font-size: 35px;
+    text-shadow: 0.1rem 0.1rem 0.1rem 0.4rem black;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    width: 100%;
+    padding: 4%;
+    border: 3px solid wheat;
+    display: block;
+    margin-bottom: 4%;
+
+    span {
+      font-size: 35px;
+      text-shadow: 0.1rem 0.1rem 0.1rem 0.4rem black;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+    }
+
+    &:hover {
+      background-color: $secondary-color;
+      color: white;
+      padding: 1.5%;
+      @include easeOut;
+    }
+  }
+
   img {
     width: 50%;
     padding: 5% 0;
@@ -677,31 +511,6 @@ nav {
   i {
     font-size: 20px;
   }
-
-  // .boxes {
-  //   display: flex;
-
-  //   justify-content: space-evenly;
-  //   align-items: center;
-  //   margin-top: 1rem;
-  //   color: #fff;
-
-  //   div {
-  //     font-size: 2rem;
-  //     border: 3px wheat solid;
-  //     padding: 1.5rem 2.5rem;
-  //     margin-bottom: 3rem;
-  //     @include easeOut;
-  //     &:hover {
-  //       padding: 0.5rem 1.5rem;
-  //       background-color: $primary-color;
-  //       color: set-text-color($secondary-color);
-  //       span {
-  //         color: #fff;
-  //       }
-  //     }
-  //   }
-  // }
 }
 //----------------End Contact*************************
 
@@ -745,11 +554,6 @@ hr.socket h5 {
   .site-content {
     background: rgba(13, 14, 15, 0.8);
 
-    .site-title {
-      font-size: 35px;
-      padding-bottom: 35px;
-      padding-top: 50px;
-    }
     .site-desc {
       font-size: 25px;
       padding-bottom: 25px;

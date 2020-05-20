@@ -8,7 +8,7 @@
 
     <link rel="stylesheet/scss" type="text/css" href="sass/style.scss" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="img/projects/akram-blue-logo-Copy.png" />
+    <link rel="icon" href="img/akram-blue-logo - Copy.png" />
 
     <!--BootStrap 4 Css-->
     <link
@@ -17,6 +17,10 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!--Font Awesome-->
     <script
       src="https://kit.fontawesome.com/d44b24acad.js"
@@ -27,7 +31,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#navbarResponsive">
-    <div id="home">
+    <div id="home" class="">
       <nav class="navbar navbar-expand-md fixed-top py-3">
         <div class="container">
           <a href="#" class="navbar-brand text-uppercase font-weight-bold"
@@ -76,7 +80,7 @@
         <div class="row site-content justify-center">
           <div class="col-md-8">
             <h1 class="site-title">
-              <span class="text-primary"> Hi,</span> I'm AKRAM
+              <span class="text-primary"> Hi,</span> I'm Akram
             </h1>
 
             <p class="site-desc ml-1">
@@ -98,7 +102,7 @@
           </div>  -->
           </div>
           <div class="col-md-4">
-            <img class="img-mobile" src="img/man1.gif" alt="" />
+            <img class="img-mobile" src="img/man1.gif" alt="gif" />
           </div>
         </div>
       </div>
@@ -107,10 +111,12 @@
 
     <section id="portfolio">
       <div class="container-fluid text-center">
-        <h1 class="site-title"><span class="text-primary"> My </span> WORK</h1>
+        <h1 class="site-title" data-aos="zoom-out-up">
+          <span class="text-primary"> My </span> WORK
+        </h1>
 
         <div class="projects">
-          <div class="item">
+          <div class="item" data-aos="fade-down" data-aos-duration="1500">
             <a href="https://akram898.github.io/New-Site/" target="_blank">
               <img src="img/Capture.PNG" alt="project" />
             </a>
@@ -128,7 +134,27 @@
               ><i class="fa fa-github fa-lg"></i
             ></a>
           </div>
-          <div class="item">
+
+          <div class="item" data-aos="fade-up" data-aos-duration="1500">
+            <a href="https://bookthechefs-10cb0.web.app/" target="_blank">
+              <img src="img/bookthechefs.PNG" alt="project" />
+            </a>
+            <a
+              href="https://bookthechefs-10cb0.web.app/"
+              target="_blank"
+              class="btn-light"
+              ><i class="fa fa-eye fa-lg"></i
+              ><span class="hidden-small"><strong>Visit Site</strong></span></a
+            >
+            <a
+              href="https://github.com/Akram898/bookTheChef"
+              target="_blank"
+              class="btn-dark"
+              ><i class="fa fa-github fa-lg"></i
+            ></a>
+          </div>
+
+          <div class="item" data-aos="fade-down" data-aos-duration="1500">
             <a
               href="https://akram898.github.io/HandazVR-clone/"
               target="_blank"
@@ -149,7 +175,7 @@
               ><i class="fa fa-github fa-lg"></i
             ></a>
           </div>
-          <div class="item">
+          <div class="item" data-aos="fade-right" data-aos-duration="1500">
             <a href="https://akram898.github.io/Comsetic-Star/" target="_blank">
               <img src="img/cosmetic-star.PNG" alt="project" />
             </a>
@@ -167,7 +193,7 @@
               ><i class="fa fa-github fa-lg"></i
             ></a>
           </div>
-          <div class="item">
+          <div class="item" data-aos="fade-down" data-aos-duration="1500">
             <a href="https://almawkaa-clone.firebaseapp.com/" target="_blank">
               <img src="img/new-almawkaa-Capture.PNG" alt="project" />
             </a>
@@ -185,7 +211,7 @@
               ><i class="fa fa-github fa-lg"></i
             ></a>
           </div>
-          <div class="item">
+          <div class="item" data-aos="fade-left" data-aos-duration="1500">
             <a href="https://freshstart-b7ac4.web.app/" target="_blank">
               <img src="img/behappy-capture1.PNG " alt="project" />
             </a>
@@ -203,7 +229,7 @@
               ><i class="fa fa-github fa-lg"></i
             ></a>
           </div>
-          <div class="item">
+          <div class="item" data-aos="fade-right" data-aos-duration="2000">
             <a href="https://new-project-80f24.web.app/" target="_blank">
               <img src="img/mobile-devices-transparent.png" alt="project" />
             </a>
@@ -224,14 +250,18 @@
         </div>
       </div>
     </section>
-
     <!--***********************************End ABout Section*******************************************************-->
 
     <section id="services-section" class="offset">
       <div class="container-fluid">
         <h1 class="site-title"><span class="text-primary">S</span>ERVICES</h1>
+        <hr />
         <div class="row">
-          <div class="col-md-4 text-center">
+          <div
+            class="col-md-4 text-center"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <img
               class="img-services"
               src="img/webdevelop.png"
@@ -249,14 +279,18 @@
             <h4>Web Design</h4>
           </div>
 
-          <div class="col-md-4 text-center">
+          <div
+            class="col-md-4 text-center"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
             <img class="img-services" src="img/seo-icon.png" alt="SEO" />
             <h4>SEO</h4>
           </div>
         </div>
       </div>
     </section>
-    <!--***********************************عAbout*******************************************************-->
+    <!--***********************************About*******************************************************-->
     <section id="about" class="offset">
       <div class="shade container-fluid">
         <div class="row">
@@ -264,32 +298,41 @@
             <h1 class="h1-big-text">
               ABOUT <span class="text-primary">ME</span>
             </h1>
-            <p>
+            <hr />
+            <p data-aos="fade-up" data-aos-duration="2000">
               <span class="text-primary">Hello everyone,</span> My name is Ahmed
               Akram, I enjoy building Websites and finding solutions, I'm
-              passionate about Programming, Web Development, Technology abd
+              passionate about Programming, Web Development, Technology and
               learning.
             </p>
-            <p>
+            <p data-aos="fade-right" data-aos-duration="2000">
               <span class="text-primary">Personally</span> I'm a family oriented
               person, I enjoy spending time with my family and I do what I do
-              for them, I Love Working-out, I like to hang out with friends from
-              time to time, My favorite hobbies are drawing and editing videos,
-              I also like reading and watching movies.
+              for them, I Love Working-out, my favorite hobbies are drawing and
+              editing videos, I also like reading and watching movies.
             </p>
-            <p>
+            <p data-aos="fade-left" data-aos-duration="2000">
               <span class="text-primary">Thank you</span> for visiting my
               website, I wish you All Health & Happiness
             </p>
             <p></p>
             <p><span class="text-primary">Let's</span> Connect Soon</p>
-            <div class="app-buttons text-center">
+            <div
+              class="app-buttons text-center"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+            >
               <a
                 class="btn btn-connect btn-outline-light btn-lg"
                 href="#contact"
                 >Connect</a
               >
-              <!-- <a class="btn btn-cv btn-outline-light btn-lg" href="#services">Check My Work</a> -->
+              <a
+                class="btn get-cv btn-outline-light btn-lg ml-2 py-2"
+                href="https://drive.google.com/open?id=1HVxX4ZbLe1WxCfc8_0j4vAudADfoOMEo"
+                target="_blank"
+                >Get CV</a
+              >
             </div>
             <img
               src="img/new-img.jpg"
@@ -434,7 +477,7 @@
             <div class="col-md-3" style="float: left;">
               <img
                 class="card-img-top"
-                src="img/bootstrap-4.svg"
+                src="img/bootstrap.jpg"
                 alt="Card image cap"
               />
             </div>
@@ -447,20 +490,7 @@
     </section>
 
     <!--***********************************Start Contact Section 3*******************************************************-->
-    <!-- <section id="contact"  class="text-center">
-      <h1 class="h1-big-text">
-       <span class="text-primary">C</span>ontact <span class="text-primary">M</span>e
-      </h1>
-  
 
-      <div class="boxes">
-        <div>
-          <span class="text-primary">E-mail : </span> akram78787@gmail.com
-        </div>
-        <div><span class="text-primary">Mobile : </span> +971568432683</div>
-        <div><span class="text-primary">Address : </span> Earth</div>
-      </div>
-    </section> -->
     <!--***********************************End Contact Section*******************************************************-->
 
     <div id="contact" class="offset">
@@ -471,7 +501,7 @@
               <span class="text-primary">C</span>ontact
               <span class="text-primary">I</span>nfo
             </h1>
-            <div class="info">
+            <div id="e-mail">
               <span class="text-primary">E-mail : </span> akram78787@gmail.com
             </div>
 
@@ -559,5 +589,20 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.14.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.14.3/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -14,40 +14,18 @@
 
 //*****************TABLETS*********************
 @include mediaMd {
-  main {
-    align-items: center;
-    text-align: center;
-
-    .h1-big-text {
-      line-height: 1;
-      font-size: 30px;
-      margin-bottom: 1rem;
+  #home {
+    .site-title {
+      font-size: 45px;
+      padding-bottom: 35px;
+      padding-top: 8%;
     }
   }
-  .ul-nav-menu,
-  .menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
-
-    &.show {
-      transform: translate3d(0, 0, 0);
-    }
+  .img-mobile {
+    position: relative;
+    width: 500px;
+    height: 500px;
   }
-  .ul-nav-menu {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px;
-  }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0);
-  }
-  .portrait {
-    max-height: 150px;
-    max-width: 150px;
-  }
-
   //about-page
   .about-info {
     grid-template-areas:
@@ -66,25 +44,73 @@
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
+  #portfolio {
+    padding-bottom: 11%;
+    h1 {
+      font-size: 60px;
+      padding: 18% 0 8% 0;
+    }
+  }
 
   #my-img {
-    max-width: 180px;
-    max-height: 180px;
+    top: 20px;
+    right: 30px;
+    left: 10px;
+  }
+
+  #skills {
+    padding-bottom: 15%;
+    h1 {
+      font-size: 55px;
+      padding: 25% 0 5% 0;
+    }
+    hr {
+      width: 25%;
+      margin-left: 40%;
+      padding-bottom: 9%;
+    }
+    .para {
+      font-size: 20px;
+      padding-bottom: 15%;
+    }
+    img {
+      position: relative;
+      max-width: 50%;
+      display: block;
+      margin-left: 25%;
+      padding-bottom: 20px;
+    }
   }
 }
 
 //*************************Mobiles************************
 @include mediaSm {
+  body {
+  }
+  #home {
+    .site-title {
+      font-size: 35px;
+      padding-bottom: 35px;
+      padding-top: 41%;
+    }
+    .img-mobile {
+      width: 250px;
+      height: 250px;
+    }
+  }
   main#home h1 {
     margin-top: 10vh;
-    font-size: 45px;
+    font-size: 35px !important;
   }
   .h2-small-text {
     font-size: 23px;
   }
+  .img-mobile {
+    width: 250px;
+  }
   .projects {
     grid-template-columns: 1fr;
-
+    grid-gap: 1.8rem;
     i {
       max-width: 70% !important;
       padding: 0;
@@ -93,6 +119,100 @@
     .hidden-small {
       font-size: 14px;
       margin: 0 0 8px 6px;
+    }
+  }
+  #portfolio {
+    padding-bottom: 11%;
+    h1 {
+      font-size: 40px;
+      margin: 7% 0;
+    }
+  }
+  #services-section {
+    h1 {
+      margin-top: 7%;
+      font-size: 55px;
+      padding: 25% 0 1% 0;
+    }
+    hr {
+      border-top: 3px solid $secondary-color;
+      width: 40%;
+      text-align: center;
+      margin-left: 30%;
+      padding-bottom: 19%;
+    }
+    h4 {
+      padding-bottom: 15%;
+    }
+  }
+
+  #about {
+    h1 {
+      margin-top: 7%;
+      font-size: 55px;
+      padding: 25% 0 5px 0;
+    }
+    hr {
+      border-top: 3px solid wheat;
+      width: 40%;
+      text-align: center;
+      margin-left: 30%;
+      padding-bottom: 9%;
+    }
+    .btn {
+      margin-top: 15px;
+    }
+    #my-img {
+      top: 20px;
+      right: 30px;
+      left: 10px;
+    }
+    .social-icons {
+      padding-top: 10%;
+    }
+  }
+  #skills {
+    padding-bottom: 15%;
+
+    h1 {
+      font-size: 55px;
+      padding: 25% 0 5% 0;
+    }
+    hr {
+      width: 25%;
+      margin-left: 40%;
+      padding-bottom: 9%;
+    }
+    .para {
+      font-size: 20px;
+      padding-bottom: 15%;
+    }
+    img {
+      position: relative;
+      max-width: 100px;
+      max-height: 350px;
+      display: block;
+      margin-left: 38%;
+      padding-bottom: 14%;
+    }
+  }
+  #contact {
+    h1 {
+      font-size: 45px;
+      padding: 25% 0 20% 0;
+    }
+    .info {
+      font-size: 25px;
+      span {
+        font-size: 25px;
+      }
+    }
+
+    #e-mail {
+      font-size: 25px;
+      span {
+        font-size: 25px;
+      }
     }
   }
 }
